@@ -1,0 +1,57 @@
+---
+import Button from "../ui/button.astro";
+import Title from "../ui/title.astro";
+import Dots from "../dots.astro";
+---
+
+<section id="hero" class="pt-8">
+    <div class="flex gap-2 mb-4">
+        <Dots />
+        <Title as="h1"
+            >identify <br /><span class="text-accent">every visitor</span
+            ></Title
+        >
+    </div>
+    <p class="mb-2">
+        stop fraud, detect bots, or delight customers. identify good and bad
+        visitors with industry-leading accuracy - even if they're anonymous.
+    </p>
+    <div class="mb-4">
+        <Button>get started</Button>
+        <Button variant="outline">contact sales</Button>
+    </div>
+    <div class="image">
+        <img src="/public/images/welcome.png" alt="welcome to spotter" />
+    </div>
+</section>
+<style lang="scss">
+    #hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--foreground);
+        gap: 1rem;
+        p {
+            text-align: center;
+            max-width: 65ch;
+        }
+        .text-accent {
+            color: var(--foreground);
+            border-bottom: 6px solid var(--primary);
+        }
+        div.image{
+            border-radius: var(--radius);
+            padding: 1rem;
+            background-color: white;
+            border: 1px solid var(--secondary);
+            background-size: cover;
+            
+            box-shadow: var(--shadow);
+            img{
+                border-radius: var(--radius);
+                max-width: 100%;
+            }
+        }
+    }
+</style>

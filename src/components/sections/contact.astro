@@ -1,0 +1,85 @@
+---
+import Button from "../ui/button.astro";
+import Title from "../ui/title.astro";
+import GDPR from "../../assets/icons/gdpr.astro";
+import ISO from "../../assets/icons/iso.astro";
+import AICPA from "../../assets/icons/aicpa.astro";
+---
+
+<section>
+    <article>
+        <div class="content">
+            <Title class="mb-2" as="h2"
+                >identify your <span class="text-accent">web </span> and <span
+                    class="text-accent">mobile</span
+                > traffic in minutes</Title
+            >
+            <p class="mb-4">
+                collect visitor IDs and signals <strong
+                    >instantly for free,</strong
+                ><br />
+                or reach out to our team for a demo.
+            </p>
+            <Button>get started</Button>
+            <Button variant="outline">contact sales</Button>
+        </div>
+
+        <div class="badges-list">
+            <div class="badge-logo">
+                <GDPR />
+            </div>
+            <div class="badge-logo">
+                <ISO />
+            </div>
+            <div class="badge-logo">
+                <AICPA />
+            </div>
+        </div>
+    </article>
+    <div>
+        <img src="/public/images/badgelead.png" alt="" />
+    </div>
+</section>
+<style lang="scss">
+    section {
+        border: 1px dotted var(--secondary);
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        article {
+            display:grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 1rem;
+            .content {
+                border: 1px solid var(--primary);
+                padding: 3rem;
+                border-radius: var(--radius);
+                gap: 1rem;
+            }
+            .badges-list{
+                
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+        }
+        .badges-list {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            flex-shrink: 0;
+            .badge-logo {
+                border: 1px solid var(--secondary);
+                padding: 1rem;
+                flex-shrink: 0;
+                border-radius: var(--radius);
+            }
+        }
+    }
+    @media (max-width: 1026px) {
+        section {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

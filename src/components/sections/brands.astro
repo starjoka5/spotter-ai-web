@@ -1,0 +1,36 @@
+---
+import Clients from "../../assets/icons/clients.astro";
+---
+
+<section id="brands">
+    <div class="brands my-6">
+        <Clients />
+    </div>
+</section>
+
+<style lang="scss">
+    section {
+        display: block;
+        .brands {
+            padding: 2rem;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    @media (max-width: 1026px) {
+        section {
+            display: flex;
+            justify-content: center;
+        }
+        .brands {
+            display: grid!important;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            padding: 1rem;
+        }
+    }
+</style>

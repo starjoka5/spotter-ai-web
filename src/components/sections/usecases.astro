@@ -1,0 +1,61 @@
+---
+import Badge from "../ui/badge.astro";
+import Button from "../ui/button.astro";
+import Title from "../ui/title.astro";
+---
+
+<section id="usecases">
+    <article>
+        <div class="grid">
+            <div class="grid-item pt-6 p-3">
+                <Badge> use cases </Badge>
+                <Title as="h2" class="mb-2"
+                    >build <span class="text-accent">safe</span> and <span
+                        class="text-accent">seamless</span
+                    > products</Title
+                >
+                <p class="mb-3">
+                    The device intelligence platform for visitor intent. <br/>
+                    <strong>reduce friction</strong> for the good guys. <strong>stop the bad guys</strong>.
+                </p>
+                <Button variant="outline">see all use cases</Button>
+            </div>
+            <div class="grid-item"></div>
+            <div class="grid-item accordion p-3">
+                <div>
+                    <span>account takeover</span>
+                    <p>
+                        identify and block login attempts using stolen
+                        credentials while recognizing legitimate users.
+                    </p>
+                </div>
+                <div>
+                    <span>payment fraud</span>
+                    <p>
+                        Reduce fraudulent transactions and increase legitimate conversions with device intelligence signals.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="" alt="" />
+            </div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+
+        
+    </article>
+</section>
+
+<style lang="scss">
+    #usecases {
+        
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+</style>

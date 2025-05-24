@@ -1,0 +1,37 @@
+---
+interface Props {
+    direction?: 'row' | 'column';
+    class?: string;
+}
+const { direction = 'column',class: className } = Astro.props;
+---
+<div class:list={["dots",className]}>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<style lang="scss" define:vars={{ direction }}>
+    .dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: var(--direction);
+        div {
+            width: 2.7rem;
+            height: 2.7rem;
+            border-radius: 50%;
+            background-color: var(--primary);
+            &:nth-child(1){
+                background-color: var(--brand-accent-1);
+            }
+            &:nth-child(2){
+                background-color: var(--primary);
+            }
+            &:nth-child(3){
+                background-color: var(--brand-accent-2);
+            }
+        }
+    }
+</style>

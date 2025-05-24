@@ -1,0 +1,25 @@
+---
+import Badge from "../ui/badge.astro";
+import Button from "../ui/button.astro";
+import Title from "../ui/title.astro";
+---
+
+<section id="testimonials">
+    <article>
+        <div class="grid">
+            <div class="grid-item pt-10 p-3">
+                <Badge> customer stories_ </Badge>
+                <Title as="h2" class="mb-2">fight fraud with <span class="text-accent">spotter</span>
+                </Title>
+                <p class="mb-3">
+                    see how our customers <strong>stop fraud in real time for real results.</strong>
+                </p>
+                <Button variant="outline">see all case studies</Button>
+            </div>
+        </div>
+    </article>
+</section>
+<style lang="scss">
+    section {
+    }
+</style>

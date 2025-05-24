@@ -1,0 +1,60 @@
+<section id="stats">
+    <article>
+        <div class="text-accent">250+</div>
+        <div class="content">
+            <span
+                >countries and territories<br />
+                where we identified devices_</span
+            >
+        </div>
+    </article>
+    <article>
+        <div class="text-accent">2 billion +</div>
+        <div class="content">
+            <span
+                >unique browsers and<br />
+                mobile devices identified_</span
+            >
+        </div>
+    </article>
+    <article>
+        <div class="text-accent">50 million +</div>
+        <div class="content">
+            <span
+                >real-time device intelligence<br />
+                API events per day processed_</span
+            >
+        </div>
+    </article>
+</section>
+<style lang="scss">
+    #stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        article {
+            padding:4rem 0;
+            padding-bottom: 12rem;
+            > div:first-child {
+                padding: 0 3.5rem;
+                border-left: 2px solid var(--primary);
+            }
+            .content {
+                padding: 0 3.5rem;
+            }
+            border: 1px dotted var(--secondary);
+            .text-accent {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+        }
+    }
+    @media (max-width: 1026px) {
+        #stats {
+            grid-template-columns: 1fr;
+            article {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+</style>

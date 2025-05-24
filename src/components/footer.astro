@@ -1,0 +1,179 @@
+---
+import Logo from "./logo.astro";
+---
+
+<footer class="pb-4">
+    <div class="container">
+        <div class="newsletter">
+            <Logo />
+            <div class="info">
+                <span>Subscribe to our newsletter</span>
+                <input type="email" placeholder="email address*" />
+            </div>
+        </div>
+        <div class="links">
+            <div>
+                <h4>product</h4>
+                <ul>
+                    <li><a href="#">device intelligence platform</a></li>
+                    <li><a href="#">smart signals</a></li>
+                    <li><a href="#">integrations</a></li>
+                    <li><a href="#">spotter vs. pro</a></li>
+                    <li><a href="#">demo</a></li>
+                    <li><a href="#">identification</a></li>
+                    <li><a href="#">pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>use cases</h4>
+                <ul>
+                    <li><a href="#">new account fraud</a></li>
+                    <li><a href="#">account takeover</a></li>
+                    <li><a href="#">account sharing prevention</a></li>
+                    <li><a href="#">sms fraud</a></li>
+                    <li><a href="#">payment fraud</a></li>
+                    <li><a href="#">paywall enforcement</a></li>
+                    <li><a href="#">personalization</a></li>
+                    <li><a href="#">bot detection</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>resources</h4>
+                <ul>
+                    <li><a href="#">resource center</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">case studies</a></li>
+                    <li><a href="#">guides</a></li>
+                    <li><a href="#">faq</a></li>
+                    <li><a href="#">support center</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>developers</h4>
+                <ul>
+                    <li><a href="#">documentation</a></li>
+                    <li><a href="#">tutorials</a></li>
+                    <li><a href="#">sdk and libraries</a></li>
+                    <li><a href="#">github</a></li>
+                    <li><a href="#">discord community</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">careers</a></li>
+                    <li><a href="#">press</a></li>
+                    <li><a href="#">partners</a></li>
+                    <li><a href="#">system status</a></li>
+                    <li><a href="#">security</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bar">
+            <div class="copyright">
+                <span>© 2025 spotter</span>
+                <a href="#">privacy policy</a>
+                <a href="#">terms and conditions</a>
+            </div>
+            <p>join our developer community on discord</p>
+            <div class="flex">
+                <span class="circle"></span>all systems normal
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style lang="scss">
+    footer {
+        .newsletter {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            flex-direction: column;
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                color: var(--foreground);
+            }
+        }
+        background-color: var(--footer-bg);
+        border-top: 1px solid var(--secondary);
+        .container {
+            display: flex;
+            gap: 4rem;
+            flex-direction: row;
+            @media (max-width: 1026px) {
+                flex-direction: row;
+            }
+        }
+        .links{
+            display: flex;
+            gap: 4rem;
+            flex-direction: row;
+            @media (max-width: 1026px) {
+                flex-direction: row;
+            }
+        }
+        h4 {
+            color: var(--background);
+            font-weight: 400;
+            font-size: 1.8rem;
+        }
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+                text-underline-offset: 4px;
+            }
+        }
+    }
+    .bar {
+        padding: 2rem;
+        display: flex;
+        width: 100%;
+        color: var(--secondary);
+        border-radius: var(--radius);
+        justify-content: space-between;
+        background-color: var(--primary-dark);
+        gap: 4rem;
+        p {
+            color: var(--background);
+        }
+        .copyright {
+            display: flex;
+            gap: 2rem;
+            a {
+                border-left: 1px solid var(--secondary);
+                padding-left: 1rem;
+            }
+        }
+    }
+    .circle {
+        width: 1rem;
+        display: block;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: var(--primary-light);
+    }
+    @media (max-width: 1026px) {
+        .bar {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .container{
+            flex-direction: column!important;
+        }
+        .links{
+            display: grid!important;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>

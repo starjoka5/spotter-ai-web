@@ -1,16 +1,45 @@
 ---
-
+import "../styles/global.scss";
+import "../styles/app.scss";
+import "../styles/utilities.scss";
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
+import WhySection from "../components/sections/why.astro";
+import HeroSection from "../components/sections/hero.astro";
+import UseCasesSection from "../components/sections/usecases.astro";
+import TestimonialsSection from "../components/sections/testimonials.astro";
+import StatsSection from "../components/sections/stats.astro";
+import ContactSection from "../components/sections/contact.astro";
+import ProductSection from "../components/sections/product.astro";
+import Dots from "../components/dots.astro";
+import BrandsSection from "../components/sections/brands.astro";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="theme-color" content="#000000">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="A fully autonomous truckload dispatcher helping owner operators and carriers scale their logistics business.">
+		<title>spooter.ai</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Header />
+		<div class="brand-bg"></div>
+		<main>
+			<div class="container">
+				<HeroSection />
+				<BrandsSection/>
+				<Dots class="my-8" direction="row"/>
+				<UseCasesSection />
+				<WhySection />
+				<TestimonialsSection />
+				<ProductSection />
+				<StatsSection />
+				<ContactSection />
+			</div>
+		</main>
+		<Footer />
 	</body>
 </html>
